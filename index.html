@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #e44d26;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            background-color: #d63717;
+        }
+
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .menu-item {
+            width: 300px;
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            position: relative;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .menu-item img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-size: 18px;
+            font-weight: bold;
+            color: #e44d26;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #e44d26;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #d63717;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+            
+        }
+
+        @media screen and (max-width: 768px) {
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            nav a {
+                margin: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Dapur Mami</h1>
+        <p>Selamat datang di Dapur Mami, tempat cemilan enak untuk seluruh keluarga!</p>
+
+        <nav>
+            <a href="#">Beranda</a>
+            <a href="#">Menu</a>
+            <a href="#">Tentang Kami</a>
+            <a href="#">Kontak</a>
+        </nav>
+    </header>
+
+    <section>
+        <div class="menu-item">
+            <img src="https://static.promediateknologi.id/crop/93x179:957x1067/750x500/webp/photo/2023/08/11/IMG-20230810-WA0034-667321533.jpg" alt="Mochi 1">
+            <h3>Mochi Coklat Strawberry</h3>
+            <p>Mochi Isi Coklat Strawberry</p>
+            <p class="price">Harga: Rp 4,000/pcs</p>
+            <button onclick="beliSekarang('6285559767408', 'mochi')">Pesan Sekarang</button>
+        </div>
+
+
+        <div class="menu-item">
+            <img src="https://telegra.ph/file/5328b6c13e603a13f6fcd.jpg" alt="citruk">
+            <h3>Citruk Pedas Asin</h3>
+            <p>citruk Cemilan Enak</p>
+            <p class="price">Harga: Rp 17,000/pcs</p>
+            <button onclick="beliSekarang('6285559767408', 'citruk')">Pesan Sekarang</button>
+        </div>
+
+
+        
+
+    </section>
+
+    
+
+
+    
+
+    <footer>
+        <p>&copy; 2024 GilangDEV. All rights reserved.</p>
+        <img src="https://telegra.ph/file/48529dce6cc3bb3296714.png"  alt="Produk" width="200" height="200" loading="lazy">
+    </footer>
+
+    <script>
+        function beliSekarang(nomorWA, namaProduk) {
+            var linkWhatsApp = 'https://wa.me/' + 6285559767408 + '?text=Saya%20tertarik%20dengan%20' + encodeURIComponent(namaProduk);
+            window.open(linkWhatsApp, '_blank');
+        }
+    </script>
+
+</body>
+</html>
